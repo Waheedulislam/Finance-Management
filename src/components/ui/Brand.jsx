@@ -1,19 +1,40 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
+import CountUp from 'react-countup';
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 
 const Brand = () => {
     return (
         <div className='container mx-auto px-4 mb-10'>
 
-            <div className='my-10 text-center'>
-                <h3 className='text-[#1F80F0] text-xl font-semibold'>TRUSTED BY THE BEST
+            <div className=' text-center lg:mb-32 mb-20'>
+                <h3 className='text-[#1F80F0] text-xl font-semibold mb-10'>TRUSTED BY THE BEST
                 </h3>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 '>
                     <div className='text-[#151D2F] text-xl font-semibold'>
+                        <p className='text-8xl font-semibold text-[#065fc5]'>
+                            <MdKeyboardArrowRight className="inline-block text-8xl -mr-7" />
+                            <CountUp start={0} end={20} />
+
+                        </p>
                         Years of Experience</div>
-                    <div className='text-[#151D2F] text-xl font-semibold'>
+                    <div className='text-[#151D2F] text-xl font-semibold '>
+                        <p className='text-8xl font-semibold pb-4 text-[#065fc5]'>
+
+                            <CountUp start={0} end={40} />
+                            +
+                        </p>
                         Financial Institutions</div>
-                    <div className='text-[#151D2F] text-xl font-semibold'>Customers Each</div>
+
+                    <div className='text-[#151D2F] text-xl font-semibold '>
+                        <p className='text-8xl font-semibold text-[#065fc5]'>
+                            <MdKeyboardArrowRight className="inline-block text-8xl -mr-7" />
+                            <CountUp start={0} end={200} />m
+
+                        </p>
+                        Customers Each</div>
                 </div>
             </div>
 
