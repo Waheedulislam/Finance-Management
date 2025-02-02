@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Features = () => {
     const features = [
         {
@@ -24,25 +26,50 @@ const Features = () => {
     ];
 
     return (
-        <div className=" bg-[#f7f9fc] pb-24">
-            <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-8">
-                {features.map((feature, index) => (
-                    <div
-                        key={index}
-                        className="bg-[#eff3f8] p-7 rounded-xl shadow-md max-w-sm justify-start "
-                    >
-                        <div
-                            className={`w-12 h-12 flex  rounded-full ${feature.bgColor}  mb-4`}
-                        >
+        <div className=" pb-24">
 
-                            <img src={feature.icon} alt="" />
+            <div className="text-center">
+                <h3 className="text-[#1F80F0] text-sm md:text-xl font-semibold mb-4">
+                    OUR PHILOSOPHY
+                </h3>
+                <h1 className="text-[#142a42] text-4xl md:text-6xl font-semibold mb-10">
+                    Human-centred innovation
+                </h1>
+            </div>
+
+            {/* section-1  */}
+
+            <div className="bg-[#f7f9fc]">
+                <div className="w-full h-auto my-10 container mx-auto px-4">
+                    <Image
+                        src="https://cdn.sanity.io/images/6jywt20u/production/2d90adc3456764f98e38ce40b5ea7d7f52fd4ce1-2206x727.png?w=1600&auto=format"
+                        width={1600} // Adjust width as needed
+                        height={727} // Adjust height as needed
+                        layout="responsive" // Makes the image responsive
+                        alt="Picture of the author"
+                    />
+                </div>
+
+                {/* section-2  */}
+                <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-8">
+                    {features.map((feature, index) => (
+                        <div
+                            key={index}
+                            className="bg-[#eff3f8] p-7 rounded-xl shadow-md max-w-sm justify-start "
+                        >
+                            <div
+                                className={`w-12 h-12 flex  rounded-full ${feature.bgColor}  mb-4`}
+                            >
+
+                                <img src={feature.icon} alt="" />
+                            </div>
+                            <h3 className="text-3xl my-6 font-semibold text-gray-900 mb-2">
+                                {feature.title}
+                            </h3>
+                            <p className="text-[#164377] text-lg  mt-4">{feature.description}</p>
                         </div>
-                        <h3 className="text-3xl my-6 font-semibold text-gray-900 mb-2">
-                            {feature.title}
-                        </h3>
-                        <p className="text-[#164377] text-lg  mt-4">{feature.description}</p>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

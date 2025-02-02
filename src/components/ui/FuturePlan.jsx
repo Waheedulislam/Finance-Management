@@ -23,12 +23,12 @@ export default function FuturePlan() {
         <div className="relative">
             {/* Clipped Background */}
             <div
-                className="absolute top-0 left-0 w-full h-full bg-[#f7f9fc]"
-                style={{ clipPath: "polygon(0 0, 100% 0%, 100% 78%, 0% 100%)" }}
+                className="absolute -top-24 left-0 w-full h-full bg-[#f7f9fc]"
+                style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%)" }}
             ></div>
 
             {/* Content Area */}
-            <div className="relative container mx-auto text-center pb-32 lg:pb-56 pt-10 px-4">
+            <div className="relative container mx-auto text-center  lg:pb-56 pt-10 px-4">
                 <div className="text-center">
                     <h3 className="text-[#1F80F0] text-sm md:text-xl font-semibold mb-4">
                         TECHNOLOGY BUILT FOR YOU
