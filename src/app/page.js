@@ -4,6 +4,8 @@ import Navbar from "@/components/shared/Navbar";
 import Image from "next/image";
 import Contact from "@/components/ui/Contact";
 import Brand from "@/components/ui/Brand";
+import FuturePlan from "@/components/ui/FuturePlan";
+import Future from "@/components/ui/f/Future";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
     <div >
       <Navbar />
       <Banner />
+      {/* <FuturePlan /> */}
+      <Future />
       <Brand />
       <Contact />
       <Footer />
