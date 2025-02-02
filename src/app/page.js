@@ -6,6 +6,7 @@ import Contact from "@/components/ui/Contact";
 import Brand from "@/components/ui/Brand";
 import Innovation from "@/components/ui/Innovation";
 import FuturePlan from "@/components/ui/FuturePlan";
+import HeroSection from "@/components/ui/HeroSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <div >
       <Navbar />
       <Banner />
+      <HeroSection />
       <Innovation />
       <FuturePlan />
       <Brand />

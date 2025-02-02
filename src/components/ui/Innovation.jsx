@@ -26,7 +26,7 @@ const Features = () => {
     ];
 
     return (
-        <div className=" pb-24">
+        <div className=" pb-24 mt-40">
 
             <div className="text-center">
                 <h3 className="text-[#1F80F0] text-sm md:text-xl font-semibold mb-4">
@@ -39,7 +39,7 @@ const Features = () => {
 
             {/* section-1  */}
 
-            <div className="bg-[#f7f9fc]">
+            <div >
                 <div className="w-full h-auto my-10 container mx-auto px-4">
                     <Image
                         src="https://cdn.sanity.io/images/6jywt20u/production/2d90adc3456764f98e38ce40b5ea7d7f52fd4ce1-2206x727.png?w=1600&auto=format"

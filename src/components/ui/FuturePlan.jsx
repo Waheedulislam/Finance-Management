@@ -1,39 +1,38 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Image from "next/image";  // Import the correct Image component
+import Image from "next/image";
 
 export default function FuturePlan() {
     const [activeTab, setActiveTab] = useState(0);
     const swiperRef = useRef(null);
 
-    const handleTabClick = (index) => {
-        setActiveTab(index);
+    useEffect(() => {
         if (swiperRef.current) {
-            swiperRef.current.slideTo(index);
+            swiperRef.current.slideTo(activeTab);
         }
-    };
+    }, [activeTab]);
 
     return (
         <div className="relative">
             {/* Clipped Background */}
             <div
-                className="absolute -top-24 left-0 w-full h-full bg-[#f7f9fc]"
+                className="absolute -top-24 left-0 w-full h-full bg-gradient-to-t from-blue-50 "
                 style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%)" }}
             ></div>
 
             {/* Content Area */}
-            <div className="relative container mx-auto text-center  lg:pb-56 pt-10 px-4">
+            <div className="relative container mx-auto text-center lg:pb-56 pt-10 px-4">
                 <div className="text-center">
                     <h3 className="text-[#1F80F0] text-sm md:text-xl font-semibold mb-4">
                         TECHNOLOGY BUILT FOR YOU
                     </h3>
-                    <h1 className="text-[#142a42] text-4xl md:text-6xl font-semibold mb-10">
+                    <h1 className="text-[#142a42] text-4xl md:text-6xl font-semibold ">
                         The future of finance
                     </h1>
                 </div>
@@ -43,9 +42,9 @@ export default function FuturePlan() {
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
-                            onClick={() => handleTabClick(tab.id)}
+                            onClick={() => setActiveTab(tab.id)}
                             className={`px-12 py-3 rounded-full mb-2 text-xl font-semibold transition 
-                        ${activeTab === tab.id ? "bg-[#b4d2f5] text-[#1a81f7]" : "text-[#1a81f7] hover:bg-[#b4d2f5]"}`}
+                            ${activeTab === tab.id ? "bg-[#b4d2f5] text-[#1a81f7]" : "text-[#1a81f7] hover:bg-[#b4d2f5]"}`}
                         >
                             {tab.label}
                         </button>
@@ -64,24 +63,27 @@ export default function FuturePlan() {
                 >
                     {tabs.map((tab) => (
                         <SwiperSlide key={tab.id}>
-                            <div className="lg:px-10 px-3 py-10 bg-white shadow-lg rounded-xl ">
-                                <div className="flex  md:flex-row items-center flex-col-reverse">
+                            <div className="lg:px-10 px-3 py-10 bg-white shadow-lg rounded-xl">
+                                <div className="flex md:flex-row items-center flex-col-reverse">
                                     {/* Text Section */}
-                                    <div className="text-left w-full md:w-1/2 px-4 lg:-mt-8">
+                                    <div className="text-left w-full md:w-1/2 px-4 mt-5 lg:-mt-8">
                                         <h4 className="text-xl font-semibold text-[#1a81f7]">{tab.label}</h4>
-                                        <h3 className="lg:text-5xl text-2xl font-semibold text-[#0b2b50] my-4 lg:my-8">{tab.title}</h3>
+                                        <h3 className="lg:text-5xl text-2xl font-semibold text-[#0b2b50] my-4 lg:my-8">
+                                            {tab.title}
+                                        </h3>
                                         <p className="mt-4 text-[#164377] font-bold my-4 lg:my-8">{tab.description}</p>
-                                        <p className="mt-2 text-[#164377] ">{tab.descriptionTwo}</p>
+                                        <p className="mt-2 text-[#164377]">{tab.descriptionTwo}</p>
                                     </div>
 
                                     {/* Image Section */}
                                     <div className="w-full md:w-1/2 flex justify-center items-center">
-                                        <div className="relative w-[450px] mb-4 h-[250px] md:w-[489px] md:h-[425px]">
+                                        <div className="relative w-[450px] h-[250px] md:w-[489px] md:h-[425px]">
                                             <Image
                                                 src={tab.image}
                                                 alt={tab.label}
-                                                layout="fill"
-                                                objectFit="cover" // Ensures proper image display
+                                                width={489}
+                                                height={425}
+                                                style={{ objectFit: "cover" }}
                                                 className="rounded-lg shadow-md"
                                             />
                                         </div>
