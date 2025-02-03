@@ -15,7 +15,7 @@ const Banner = () => {
             <div className="relative py-10 lg:py-16">
                 <div className="flex flex-col  md:flex-row  items-center justify-between gap-10">
                     {/* Text Section */}
-                    <div className="w-full md:w-1/2 ml-32 text-left">
+                    <div className="w-full md:w-1/2 lg:ml-32 text-left lg:mt-0 mt-20 px-4">
                         <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold mb-4 lg:mb-6 text-white">
                             Embrace the future of finance
                         </h2>
@@ -47,7 +47,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div className="hidden md:block">
                     <Image
                         src={img}
                         alt="tech"
