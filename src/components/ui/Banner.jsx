@@ -70,7 +70,7 @@ const Banner = () => {
                         width={424}
                         height={518}
                         style={{ objectFit: 'cover' }}
-                        className="absolute w-full   z-10 -top-[18%] right-1"
+                        className="absolute w-full   z-10 -top-[18%] right-[100%]"
                     />
                     <Image
                         src={img3}
@@ -78,7 +78,7 @@ const Banner = () => {
                         width={424}
                         height={518}
                         style={{ objectFit: 'cover' }}
-                        className="absolute w-full left-0   z-10 -top-[18%] right-0"
+                        className="absolute w-full left-0   z-10 -top-[18%] right-[100%]"
                     />
                     <Image
                         src={img4}

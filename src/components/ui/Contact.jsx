@@ -1,7 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { IoIosArrowForward } from "react-icons/io";
-
+import img from '../../../public/assets/backgrounds/WaveLinesDesktop2.svg'
+import img1 from '../../../public/assets/backgrounds/WaveLinesDesktop1.svg'
+import img3 from '../../../public/assets/backgrounds/WaveLinesDesktop3.svg'
+import img4 from '../../../public/assets/backgrounds/WaveLinesDesktop4.svg'
+import img2 from '../../../public/assets/backgrounds/ctaMobileWaveLines.svg'
+import Image from "next/image";
 const Contact = () => {
     const [clipPathValue, setClipPathValue] = useState("polygon(0 0, 100% 14%, 100% 100%, 0% 100%)");
 
@@ -45,11 +50,48 @@ const Contact = () => {
             </div>
 
             {/* Background SVG Image (Uncomment if needed) */}
-            {/* <img
-                src="/assets/backgrounds/WaveLinesDesktop3.svg"
-                alt="Background Pattern"
-                className="absolute object-cover h-[120%] w-[140%] lg:w-full left-[-20%] top-[-10%] z-0"
-            /> */}
+            <div className="hidden md:block">
+                <Image
+                    src={img}
+                    alt="tech"
+                    width={424}
+                    height={518}
+                    style={{ objectFit: 'cover' }}
+                    className="absolute  z-10  bottom-[1%] right-[20%]"
+                />
+                <Image
+                    src={img1}
+                    alt="tech"
+                    width={424}
+                    height={518}
+                    style={{ objectFit: 'cover' }}
+                    className="absolute  z-10 left-1 top-[3%] right-[100%]"
+                />
+                <Image
+                    src={img2}
+                    alt="tech"
+                    width={424}
+                    height={518}
+                    style={{ objectFit: 'cover' }}
+                    className="absolute w-full   z-10 top-[18%] right-1"
+                />
+                <Image
+                    src={img3}
+                    alt="tech"
+                    width={424}
+                    height={518}
+                    style={{ objectFit: 'cover' }}
+                    className="absolute w-full left-0    z-10 top-[1%] right-[100%]"
+                />
+                <Image
+                    src={img4}
+                    alt="tech"
+                    width={424}
+                    height={518}
+                    style={{ objectFit: 'cover' }}
+                    className="absolute  z-10   bottom-1 right-[100%]"
+                />
+            </div>
         </section>
     );
 };
