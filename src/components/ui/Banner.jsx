@@ -42,7 +42,7 @@ const Banner = () => {
                                 alt="banner"
                                 fill
                                 className="rounded-lg shadow-md object-cover"
-                                style={{ clipPath: "polygon(86% 0, 100% 0%, 100% 100%, 0% 100%)" }}
+                                style={{ clipPath: "polygon(96% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
                             />
                         </div>
                     </div>

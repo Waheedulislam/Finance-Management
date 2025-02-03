@@ -9,7 +9,16 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp } from "react-icons/io";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { FaEarthAsia } from "react-icons/fa6";
 
 
 const Navbar = () => {
@@ -83,19 +92,47 @@ const Navbar = () => {
 
 
                     <li>
-                        <Link href="/services" className="hover:border-b-2 pb-2 px-5 border-white text-xl">Services</Link>
+                        <Link href="/services" className="hover:border-b pb-2 px-5 border-white text-xl">Services</Link>
                     </li>
                     <li>
-                        <Link href="/about-us" className="hover:border-b-2 pb-2 px-5 border-white text-xl">About Us</Link>
+                        <Link href="/about-us" className="hover:border-b pb-2 px-5 border-white text-xl">About Us</Link>
                     </li>
-                    <li>
-                        <Link href="/pricing" className="hover:text-blue-400">Pricing</Link>
-                    </li>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <p className="border-2 rounded-full py-1 px-3 border-white text-xl flex justify-center items-center cursor-pointer">
+                                <FaEarthAsia className="mr-1" /> EN
+                                <IoIosArrowUp className="ml-1" />
+                            </p>
+                        </DropdownMenuTrigger>
+
+                        <DropdownMenuContent >
+                            <DropdownMenuLabel className='text-xl text-gray-700'>EN
+                                (English)</DropdownMenuLabel>
+                            <DropdownMenuSeparator />
+                            <hr />
+                            <DropdownMenuItem className='text-xl text-gray-700'>
+
+                                TH
+                                (Thai)</DropdownMenuItem>
+                            <hr />
+                            <DropdownMenuItem className='text-xl text-gray-700'>
+
+                                ID
+                                (Bahasa Indonesia)</DropdownMenuItem>
+                            <hr />
+                            <DropdownMenuItem className='text-xl text-gray-700'>
+
+                                TW
+                                (Traditional Chinese)</DropdownMenuItem>
+
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
                 </ul>
 
                 {/* Contact Us Button */}
-                <button className="hidden md:block py-2 px-4 bg-[#007aff] text-white rounded-lg hover:bg-blue-600">
-                    <Link href="/contact">Contact Us</Link>
+                <button className="hidden md:block py-3 px-4 bg-[#FE8B51] bg-transparent  text-white text-2xl font-semibold border hover:bg-white hover:text-[#007aff] hover:shadow-lg">
+                    <Link href="/contact"><p className="flex justify-center items-center">Contact Us <IoIosArrowForward className='ml-2' /></p></Link>
                 </button>
 
                 {/* Mobile Menu Button */}
@@ -105,21 +142,76 @@ const Navbar = () => {
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <ul className="absolute top-16 left-0 w-full bg-[#007aff] p-4 flex flex-col space-y-4 text-center md:hidden">
+                    <ul className="absolute top-16 left-0 w-full bg-[#007aff] p-4 flex flex-col space-y-4  md:hidden text-white items-start">
 
                         <li>
-                            <Link href="/solutions" className="block py-2 text-[#f8fafc] hover:text-blue-400">Solutions</Link>
+                            <HoverCard>
+                                <HoverCardTrigger>
+                                    <p className=" pb-2 px-5 text-lg cursor-pointer flex justify-center items-center">Solutions <IoIosArrowDown className="ml-1" /></p>
+                                </HoverCardTrigger>
+                                <HoverCardContent className='text-left'>
+                                    <Link href="/services" className="hover:border-b-2    border-white text-lg">AnyCaaS</Link>
+                                    <br />
+                                    <hr className="my-2" />
+                                    <Link href="/services" className="hover:border-b-2   border-white text-lg">
+                                        AnyBaaS</Link>
+                                    <br />
+                                    <hr className="my-2" />
+                                    <Link href="/services" className="hover:border-b-2 pb-2  border-white text-lg">
+                                        AnyPaaS</Link>
+
+                                </HoverCardContent>
+                            </HoverCard>
                         </li>
+
+
+
                         <li>
-                            <Link href="/services" className="block py-2 text-[#f8fafc] hover:text-blue-400">Services</Link>
-                        </li>
-                        <li>
-                            <Link href="/about-us" className="block py-2 text-[#f8fafc] hover:text-blue-400">About Us</Link>
+                            <Link href="/services" className="hover:border-b pb-2 px-5 border-white text-xl">Services</Link>
                         </li>
 
                         <li>
-                            <Link href="/contact" className="block py-2 text-[#f8fafc] hover:text-blue-400">Contact</Link>
+                            <Link href="/about-us" className="hover:border-b pb-2 px-5 border-white text-lg">About Us</Link>
                         </li>
+                        {/* Contact Us Button */}
+
+                        <DropdownMenu >
+                            <DropdownMenuTrigger asChild>
+                                <p className="border-2 rounded-full py-1 px-3 border-white text-xl flex justify-center items-center cursor-pointer ml-32">
+                                    <FaEarthAsia className="mr-1" /> EN
+                                    <IoIosArrowUp className="ml-1" />
+                                </p>
+                            </DropdownMenuTrigger>
+
+                            <DropdownMenuContent >
+                                <DropdownMenuLabel className='text-xl text-gray-700'>EN
+                                    (English)</DropdownMenuLabel>
+                                <DropdownMenuSeparator />
+                                <hr />
+                                <DropdownMenuItem className='text-xl text-gray-700'>
+
+                                    TH
+                                    (Thai)</DropdownMenuItem>
+                                <hr />
+                                <DropdownMenuItem className='text-xl text-gray-700'>
+
+                                    ID
+                                    (Bahasa Indonesia)</DropdownMenuItem>
+                                <hr />
+                                <DropdownMenuItem className='text-xl text-gray-700'>
+
+                                    TW
+                                    (Traditional Chinese)</DropdownMenuItem>
+
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                        <li className="w-full text-center py-8">
+                            <button className="flex md:block py-3 px-4  bg-transparent   text-white text-2xl font-semibold border bg-[#007aff] hover:shadow-lg w-full ">
+                                <Link href="/contact"><p className="flex justify-center items-center">Contact Us <IoIosArrowForward className='ml-2' /></p></Link>
+                            </button>
+                        </li>
+
+
                     </ul>
                 )}
             </div>

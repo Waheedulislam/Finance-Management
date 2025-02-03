@@ -65,7 +65,7 @@ const HeroSection = () => {
                                 width={424}
                                 height={518}
                                 style={{ objectFit: 'cover' }}
-                                className="absolute top-[40%] left-[20%] w-[min(87px,_20%)] rounded-full drop-shadow-2xl"
+                                className="absolute top-[40%] left-[20%] w-[min(87px,_20%)] rounded-full drop-shadow-2xl animate-bounce"
                             />
                             <Image
                                 src="https://cdn.sanity.io/images/6jywt20u/production/c544c6e75349fb440fc0938052f9288519c87bec-74x75.svg?w=74&auto=format"
@@ -73,7 +73,7 @@ const HeroSection = () => {
                                 width={424}
                                 height={518}
                                 style={{ objectFit: 'cover' }}
-                                className="absolute top-[20%] left-[12%] -translate-x-1/2 w-[min(73px,_18%)] rounded-full drop-shadow-2xl"
+                                className="absolute top-[20%] left-[12%] -translate-x-1/2 w-[min(73px,_18%)] rounded-full drop-shadow-2xl animate-bounce"
                             />
 
 
