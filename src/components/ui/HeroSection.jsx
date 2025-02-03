@@ -3,6 +3,8 @@ import React from 'react';
 import img from '../../../public/assets/backgrounds/WaveLinesDesktop1.svg'
 
 const HeroSection = () => {
+
+
     return (
         <div className="mb-60 relative">
             <div
