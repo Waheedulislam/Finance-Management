@@ -11,6 +11,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        "bounce-slow": "bounce 50s infinite", // Bounce animation 3 second slow
+      },
     },
   },
   plugins: [],
