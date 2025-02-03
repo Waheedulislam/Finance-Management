@@ -36,7 +36,7 @@ const Banner = () => {
 
                     {/* Image Section */}
                     <div className="w-full md:w-1/2 flex justify-center items-center">
-                        <div className="relative w-[1250] h-[900px] md:h-[500px] -ml-32 ">
+                        <div className="relative w-[990px] h-[900px] md:h-[500px] -ml-32 ">
                             <Image
                                 src="https://cdn.sanity.io/images/6jywt20u/production/4c4adc11b7ca6ea25c7e7cba555d8f0b06488f3f-7952x5304.jpg?w=1600&auto=format"
                                 alt="banner"
