@@ -89,8 +89,8 @@ const Banner = () => {
                         className="absolute  z-10 left-1 top-2 right-[100%]"
                     />
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

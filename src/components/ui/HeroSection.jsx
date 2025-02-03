@@ -15,7 +15,7 @@ const HeroSection = () => {
                     {/* Text Section */}
                     <div className="text-left w-full md:w-1/2 px-4 mt-5 lg:mt-8">
                         <h4 className="text-xl font-semibold text-[#1a81f7]">POWERING THE FUTURE OF FINANCE</h4>
-                        <h2 className="lg:text-7xl text-3xl font-semibold text-[#0b2b50] my-4 lg:my-8">
+                        <h2 className="lg:text-7xl text-4xl font-semibold text-[#0b2b50] my-4 lg:my-8">
                             Uncovering new ways to delight customers
                         </h2>
                         <p className="mt-4 text-[#164377] font-bold my-4 lg:my-8">
@@ -28,18 +28,16 @@ const HeroSection = () => {
 
                     {/* Image Section */}
                     <div className="relative w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
-                        <div>
-                            <Image
-                                src={img}
-                                alt="tech"
-                                width={424}
-                                height={518}
-                                style={{ objectFit: 'cover' }}
-                                className="absolute  z-10 -top-[18%] right-[20%]"
-                            />
-                        </div>
+                        {/* Background Decorative Image */}
+                        <Image
+                            src={img}
+                            alt="tech"
+                            width={400}
+                            height={500}
+                            className="absolute top-[-10%] sm:top-[-15%] left-[0%] sm:right-[15%] z-0 opacity-50"
+                        />
                         {/* main-image  */}
-                        <div className="relative w-[450px] h-[250px] md:w-[489px] md:h-[425px] flex justify-center items-center">
+                        <div className="relative lg:mt-8 mt-28 w-[450px] h-[250px] md:w-[489px] md:h-[425px] flex justify-center items-center">
                             <Image
                                 src="https://cdn.sanity.io/images/6jywt20u/production/5ca8af1a922b106b962c34781483bc8e6e066688-1124x1364.png?w=640&auto=format"
                                 alt="tech"
